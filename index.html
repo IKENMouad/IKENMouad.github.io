@@ -688,7 +688,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form role="form" class="php-email-form">
+            <div class="php-email-form">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -721,7 +721,7 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit" onclick="sendMail()">Send Message</button></div>
-            </form>
+            </div>
           </div>
 
         </div>
@@ -751,7 +751,9 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    window.open('mailto:contactHamza.tahri@gmail.com?subject=' + document.getElementsByName("subject")[0].value + '&body=' + document.getElementsByName("message")[0].value);
+    function sendMail() {
+      window.open('mailto:contactHamza.tahri@gmail.com?subject=' + document.getElementsByName("subject")[0].value + '&body=' + document.getElementsByName("message")[0].value);
+    }
   </script>
 
 </body>
